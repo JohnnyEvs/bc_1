@@ -1,0 +1,10 @@
+<center><a href="/">MAIN</a> | <a href="/orders/">ORDER LIST </a> | <a href="/name/">OUR CLIENTS </a> | <a href="/cars/">OUR CARS </a></center>
+
+
+{% for order in orders_list %}
+<div><center><h2>
+    <a href="/order/{{ order.id }}">
+        {{order.name}}
+    </a></center>
+</h2></div>
+{% endfor %}

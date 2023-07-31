@@ -1,0 +1,28 @@
+<center><a href="/">MAIN</a> | <a href="/orders/">ORDER LIST </a> | <a href="/name/">OUR CLIENTS </a> | <a href="/cars/">OUR CARS </a></center>
+
+<h2><center> ORDERS: </center></h2>
+{% for order in orders_list %}
+    <div> <h2><center>
+    <a href="/order/{{ order.id }}">
+        {{order.name}}
+    </a>
+</center></h2></div>
+{% endfor %}
+<hr>
+<h2><center> OUR CLIENTS: </center></h2>
+{% for client in clients %}
+    <div><h2><center>
+    <a href="/names/{{ client.id }}">
+        {{client.name}}
+    </a>
+</center></h2></div>
+{% endfor %}
+<hr>
+<h2><center> OUR CARS: </center></h2>
+{% for car in cars %}
+    <div><h2><center>
+    <a href="/car/{{ car.brand }}">
+        {{car.brand}}
+    </a>
+</center></h2></div>
+{% endfor %}
